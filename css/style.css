@@ -710,5 +710,11 @@ a:focus {
   color: #fbfcfd;
 }
 
+#img-index-photo{
+  width: 150px;
+  margin-top: 50px;
+  border-radius: 50%;
+}
+
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
