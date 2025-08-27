@@ -1,0 +1,526 @@
+/*!
+ * Projet MonPortfolio
+ * © 2025 Yanis Chiouar — Licence MIT (voir /LICENSE)
+ */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            min-width: 300px;
+        }
+
+        #container-typing{
+            width: max(50%, 330px);
+        }
+
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .typing-animation {
+            border-right: 2px solid rgb(79 70 229);
+            animation: typing 3s steps(30) infinite, blink 1s infinite;
+        }
+
+        @keyframes typing {
+            0%, 50% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: rgb(79 70 229); }
+        }
+
+
+        #logo{
+            margin-right: 10px;
+        }
+
+        #accueil{
+                margin-top: 73px;
+            }
+        
+        /* Animations subtiles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Navigation avec effet glassmorphism subtil */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Cartes avec ombres douces */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Boutons élégants */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #4a5568;
+            padding: 12px 24px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #667eea;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .SAKeyPassword{
+            width: 500px !important;
+        }
+
+        .card-screen{
+            width: 300px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        
+
+        #icon-mastermate{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #landing-page{
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        #icon-sakeypassword{
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        /* Photo de profil avec bordure subtile */
+        .profile-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 3px solid white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        
+        
+        .profile-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Barres de compétences */
+        .skill-bar {
+            background: #f1f5f9;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            width: 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -37px;
+            top: 24px;
+            width: 10px;
+            height: 10px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e2e8f0;
+        }
+        
+        /* Sections avec espacement harmonieux */
+        .section {
+            padding: 80px 0;
+        }
+        
+        /* Effet de survol subtil sur les liens */
+        .nav-link {
+            position: relative;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background: #667eea;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Tags de technologies */
+        .tech-tag {
+            background: #f8fafc;
+            color: #4a5568;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .container-competences{
+            min-height: 455px;
+        }
+
+
+
+
+        .img-illustration-competences{
+            width: 40px;
+        }
+
+
+        
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 24px;
+            color: #4a5568;
+            font-weight: 500;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .mobile-nav-link:hover {
+            background: #f8fafc;
+            color: #667eea;
+            padding-left: 32px;
+        }
+        
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+        
+        /* Animation du bouton burger */
+        .burger-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .burger-icon.active {
+            transform: rotate(180deg);
+        }
+
+
+        .img-container-pro{
+            width: auto;
+            height: 30px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+
+
+        .img-container-pro+span{
+            min-width: 69px;
+            display: block;
+        }
+
+        .container-timeline{
+            padding-left: 10px;
+        }
+
+
+
+        #container-profile-image{
+            position: relative;
+        }
+        #container-profile-image::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                rgba(59, 130, 246, 0.4) 60deg,
+                rgba(29, 78, 216, 0.6) 120deg,
+                rgba(37, 99, 235, 0.4) 180deg,
+                transparent 240deg,
+                transparent 360deg
+            );
+            z-index: -1;
+            animation: rotateGlow 4s linear infinite;
+        }
+        
+        #container-profile-image::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                rgba(59, 130, 246, 0.1) 0%,
+                rgba(59, 130, 246, 0.05) 50%,
+                transparent 70%
+            );
+            z-index: -1;
+            animation: fadeGlow 2s ease-in-out infinite alternate;
+        }
+
+
+
+
+
+        @keyframes rotateGlow {
+            0% {
+                transform: rotate(0deg);
+                 
+            }
+            100% {
+                transform: rotate(360deg);
+                
+            }
+            
+        }
+        
+        @keyframes fadeGlow {
+            0% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+        
+
+
+        
+        /* Responsive */
+
+        @media (max-width: 1100px) {
+            .profile-image{
+                width: 350px;
+                height: 350px;
+            }
+        }
+        
+
+        @media (max-width: 1030px) {
+            .text-adaptative{
+                font-size: medium !important;
+            }
+            
+        }
+
+        @media (max-width: 900px) {
+            .profile-image{
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .profile-image{
+                width: 260px;
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 230px;
+                height: 230px;
+            }
+
+            #retour{
+                display: none;
+            }
+
+            #project-title{
+                width: 100%;
+            }
+
+            .container-buttons{
+                justify-content: center;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+        }
+
+        
+        
+
+
+        @media (max-width: 520px) {
+            .SAKeyPassword{
+                width: 300px;
+            }
+
+            .btn-primary, .btn-secondary{
+                font-size: 90%;
+            }
+            .title-project{
+                font-size: 2.2rem !important;
+            }
+        }
+
+        
+
+        @media (max-width: 420px) {
+            #container-typing{
+                display: none;
+            }
+        }
+
+        
+
+        @media (max-width: 380px) {
+            .adaptative-container-contact{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .adaptative-container-contact div+div, .adaptative-container-contact div+div{
+                margin-left: 0 !important;
+            }
+
+            .title-project{
+                font-size: 2rem !important;
+            }
+        }
+
+        
+        @media (max-width: 360px) {
+            .img-container-pro+span{
+                min-width: 60px;
+                font-size: 0.7em;
+            }
+        }
+        
+
+        @media (max-width: 310px) {
+            .card-screen, .SAKeyPassword{
+                width: 280px;
+            }
+        }
