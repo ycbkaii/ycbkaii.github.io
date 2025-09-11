@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://chiouar.com/</loc>
 
-
     <image:image>
       <image:loc>https://chiouar.com/img/yanis_chiouar.jpeg</image:loc>
-      <image:title>Portait de Yanis Chiouar | Porfolio</image:title>
+      <image:title>Portrait de Yanis Chiouar | Portfolio</image:title>
     </image:image>
 
     <lastmod>2025-08-31</lastmod>
     <priority>1.0</priority>
   </url>
 
-
 </urlset>
+
