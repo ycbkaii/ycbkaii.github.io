@@ -197,7 +197,7 @@
                         <span class="tech-tag">Docker</span>                        
                     </div>
                     <div class="flex space-x-3">
-                        <button class="btn-primary text-sm px-4 py-2" onclick="showProject('mastermate')">Voir le projet</button>
+                        <button class="btn-primary text-sm px-4 py-2" onclick="showProject('mastermate'); window.location.href='#mastermate';">Voir le projet</button>
                         <!-- <button class="btn-secondary text-sm px-4 py-2">Code source</button> -->
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                         <span class="tech-tag">BCrypt (Hash)</span>                        
                     </div>
                     <div class="flex space-x-3">
-                        <button class="btn-primary text-sm px-4 py-2" onclick="showProject('sakey')">Voir le projet</button>
+                        <button class="btn-primary text-sm px-4 py-2" onclick="showProject('sakey'); window.location.href='#sakeyproject';">Voir le projet</button>
                         <button class="btn-secondary text-sm px-4 py-2" onclick="window.open(`https://github.com/ycbkaii/SAKeyPassword`)">Code source</button>
                     </div>
                 </div>
@@ -1342,6 +1342,7 @@
         function hideProject() {
             document.getElementById('project-page').classList.add('hidden');
             document.body.style.overflow = 'auto';
+            history.pushState("", document.title, window.location.pathname + window.location.search);
         }
 
         // Fonction pour générer le HTML du projet
@@ -1494,6 +1495,12 @@
 
         
 
+        window.addEventListener('popstate', function(event) {
+            
+            if(window.location.href.indexOf('#mastermate') === -1 && window.location.href.indexOf('#sakeyproject') === -1){
+                hideProject();
+            }
+        });
 
 
 
