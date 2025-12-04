@@ -1055,6 +1055,7 @@
             e.preventDefault();
             
             const mailPro = "pro.yanischiouar@gmail.com";
+            let erreur = false;
 
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
@@ -1078,14 +1079,22 @@
 
             await fetch(`https://formsubmit.co/ajax/${mailPro}`,{
                 method : "POST",
-                headers : {"Accept" : "application/json"},
+                headers : {
+                    "Accept" : "application/json",
+                    "Content-Type": "application/json"
+                },
                 body : data
             }).then(()=>{
                 console.log("Message envoyé !")
             }).catch((e)=>{
                 console.error("Erreur lors de l'envoi du message : "+e);
                 alert("Erreur lors de l'envoi du message :/");
+                
             });
+
+            if(!erreur){
+                return false;
+            }
 
 
             // Feedback Envoyer
