@@ -11,8 +11,17 @@
       <image:title>Image Yanis Chiouar</image:title>
     </image:image>
 
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>1.0</priority>
+  </url>
+
+
+  <url>
+    <loc>https://chiouar.com/mastermate/</loc>
+
+
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
